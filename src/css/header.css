@@ -37,3 +37,7 @@ nav {
 .icon {
     color: var(--azure);
 }
+
+.active {
+    opacity: 1;
+}
