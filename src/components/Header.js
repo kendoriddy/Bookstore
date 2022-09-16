@@ -1,13 +1,13 @@
 import React from 'react';
 import '../css/header.css';
 import { BsPersonFill } from 'react-icons/bs';
+import Navbar from './Navbar';
 
 const Header = () => (
   <div className="header">
     <div className="navs">
       <h3>Bookstore CMS</h3>
-      <nav>BOOKS</nav>
-      <nav>CATEGORIES</nav>
+      <Navbar />
     </div>
     <div className="oval">
       <div className="icon">

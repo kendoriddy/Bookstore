@@ -7,37 +7,50 @@
 }
 
 .navs {
-    display: flex;
-    justify-content: flex-start;
-    gap: 40px;
-    line-height: 2.313rem;
-    font-family: 'Montserrat', serif;
+  display: flex;
+  /* justify-content: flex-start; */
+  gap: 40px;
+  line-height: 2.313rem;
+  font-family: "Montserrat", serif;
 }
 
 .navs h3 {
-    color: var(--azure);
+  color: var(--azure);
 }
 
 .oval {
-    background-color: var(--white);
-    border-radius: 50%;
-    height: 2.313rem;
-    width: 2.313rem;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--white);
+  border-radius: 50%;
+  height: 2.313rem;
+  width: 2.313rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-nav {
-    color: var(--black);
-    opacity: .5;
+.nav-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  opacity: .5;
+}
+
+.nav-list li {
+  list-style: none;
+}
+
+.nav-list li a {
+  color: var(--black);
+  opacity: 0.5;
 }
 
 .icon {
-    color: var(--azure);
+  color: var(--azure);
 }
 
 .active {
-    opacity: 1;
+  opacity: 1;
+  border-bottom: var(--azure);
 }
