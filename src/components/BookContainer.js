@@ -4,8 +4,6 @@ import BookCard from './BookCard';
 const BookContainer = () => (
   <div>
     <BookCard />
-    <BookCard />
-    <BookCard />
   </div>
 );
 
