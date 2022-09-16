@@ -8,6 +8,7 @@
 
 .navs {
   display: flex;
+
   /* justify-content: flex-start; */
   gap: 40px;
   line-height: 2.313rem;
@@ -34,7 +35,7 @@
   justify-content: flex-start;
   align-items: center;
   gap: 30px;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .nav-list li {
