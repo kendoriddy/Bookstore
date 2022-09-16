@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/card.css';
+import Book from './Book';
 
 const BookCard = () => {
   const books = [
@@ -27,16 +28,7 @@ const BookCard = () => {
   return (
     <div>
       {books.map((book) => (
-        <div key={book.id} className="card-container">
-          <div className="left-side">
-            <span className="class-of">Action</span>
-            <h2 className="title">{book.title}</h2>
-            <span className="author">{book.author}</span>
-          </div>
-          <div>
-            <button type="button">Remove</button>
-          </div>
-        </div>
+        <Book key={book.id} title={book.title} author={book.author} />
       ))}
     </div>
   );
