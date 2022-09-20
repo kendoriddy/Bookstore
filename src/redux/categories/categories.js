@@ -10,3 +10,7 @@ export default function reducer(state = initialState, action) {
       return state;
   }
 }
+
+export const checkBookStatus = () => ({
+  type: CHECK,
+});
