@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import '../css/add.css';
+import { v4 as uuidv4 } from 'uuid';
+import { addBook } from '../redux/books/Books';
 
-const Form = () => {
+export default function AddBook() {
   const dispatch = useDispatch();
 
   const [bookValues, setBookValues] = useState({
@@ -18,15 +19,30 @@ const Form = () => {
     });
   };
 
+  const addBookHandler = (e) => {
+    e.preventDefault();
+    if (!bookValues.title.length > 0 || !bookValues.author.length > 0) return;
+    const book = {
+      title: bookValues.title,
+      author: bookValues.author,
+      id: uuidv4(),
+    };
+    dispatch(addBook(book));
+    setBookValues({
+      title: '',
+      author: '',
+    });
+  };
   return (
     <div>
-      <form>
+      <h1>ADD NEW BOOK</h1>
+      <form onSubmit={addBookHandler}>
         <input
           type="text"
           required
           value={bookValues.title}
           onChange={handleChange}
-          placeholder="Book Title"
+          placeholder="Book title"
           name="title"
         />
         <input
@@ -34,13 +50,11 @@ const Form = () => {
           required
           value={bookValues.author}
           onChange={handleChange}
-          placeholder="Author"
+          placeholder="Book author"
           name="author"
         />
         <button type="submit">ADD BOOK</button>
       </form>
     </div>
   );
-};
-
-export default Form;
+}
