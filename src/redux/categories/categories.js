@@ -1,11 +1,9 @@
-const CHECK = 'bookstore/category/CHECK';
+const CHECK = 'bookstore/categories/CHECK';
 
-const initialState = [];
-
-export default function categories(state = initialState, action) {
+export default function reducer(state = [], action) {
   switch (action.type) {
     case CHECK:
-      return 'Working on it';
+      return 'under construction';
     default:
       return state;
   }
