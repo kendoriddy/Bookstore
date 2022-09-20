@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import '../css/add.css';
+import { addBook } from '../redux/books/books';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -18,9 +20,24 @@ const Form = () => {
     });
   };
 
+  const addBookHandler = (e) => {
+    e.preventDefault();
+    if (!bookValues.title.length > 0 || !bookValues.author.length > 0) return;
+    const book = {
+      title: bookValues.title,
+      author: bookValues.author,
+      id: uuidv4(),
+    };
+    dispatch(addBook(book));
+    setBookValues({
+      title: '',
+      author: '',
+    });
+  };
+
   return (
     <div>
-      <form>
+      <form onSubmit={addBookHandler}>
         <input
           type="text"
           required
