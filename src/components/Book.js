@@ -10,7 +10,6 @@ const Book = (props) => {
 
   const removeHandler = () => {
     dispatch(removeBook(id));
-    console.log(id);
   };
 
   return (
