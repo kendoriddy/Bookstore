@@ -1,26 +1,28 @@
+import { v4 as uuidv4 } from 'uuid';
+
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 const initialState = [
   {
-    title: 'The Hunger Games',
+    title: 'The EndGames',
     author: 'Suzanne Collins',
-    id: 1,
+    id: uuidv4(),
   },
   {
-    title: 'Years End',
+    title: 'Survival of the weakest',
     author: 'Friend Amana',
-    id: 2,
+    id: uuidv4(),
   },
   {
     title: 'Auspice,',
     author: 'Ryan Musa',
-    id: 3,
+    id: uuidv4(),
   },
   {
     title: 'Broad Shoulders',
     author: 'Ben Sharp',
-    id: 4,
+    id: uuidv4(),
   },
 ];
 
