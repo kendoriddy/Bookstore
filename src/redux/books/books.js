@@ -5,13 +5,13 @@ const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 const initialState = [
   {
-    title: 'The EndGames',
+    title: 'The End Games',
     author: 'Suzanne Collins',
     id: uuidv4(),
   },
   {
-    title: 'Survival of the weakest',
-    author: 'Friend Amana',
+    title: 'Survival of the Weakest',
+    author: 'Friend Amania',
     id: uuidv4(),
   },
   {
