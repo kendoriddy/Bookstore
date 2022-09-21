@@ -22,7 +22,9 @@ const Form = () => {
 
   const addBookHandler = (e) => {
     e.preventDefault();
-    if (!bookValues.title.length > 0 || !bookValues.author.length > 0) return;
+    const title = document.getElementsByName('title')[0].value;
+    const author = document.getElementsByName('author')[0].value;
+    if (!title.length > 0 || !author.length > 0) return;
     const book = {
       title: bookValues.title,
       author: bookValues.author,
