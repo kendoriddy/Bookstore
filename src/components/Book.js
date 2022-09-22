@@ -3,27 +3,55 @@ import '../css/card.css';
 import { useDispatch } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { removeBook } from '../redux/books/books';
+import { percentage, ProgressBar } from './ProgressBar';
 
 const Book = (props) => {
   const dispatch = useDispatch();
-  const { title, author, id } = props;
+  const {
+    title, author, id, category,
+  } = props;
 
   const removeHandler = () => {
     dispatch(removeBook(id));
   };
 
   return (
-    <div>
-      <div className="card-container">
-        <div className="left-side">
-          <span className="class-of">Action</span>
+    <div className="card-container">
+      <div className="left-side">
+        <div>
+          <span className="class-of">{category}</span>
           <h2 className="title">{title}</h2>
           <span className="author">{author}</span>
         </div>
-        <div>
-          <button type="button" onClick={removeHandler}>
+        <div className="left-buttons">
+          <button className="left-btns comments" type="button" onClick={removeHandler}>
+            Comments
+          </button>
+          <span className="separator">|</span>
+          <button className="left-btns remove" type="button" onClick={removeHandler}>
             Remove
           </button>
+          <span className="separator">|</span>
+          <button className="left-btns edit" type="button" onClick={removeHandler}>
+            Edit
+          </button>
+        </div>
+      </div>
+      <div className="other-flex">
+        <div className="middle-bar">
+          <div>
+            <ProgressBar />
+          </div>
+          <div>
+            <div className="percent">{`${percentage}%`}</div>
+            <div className="completed">Completed</div>
+          </div>
+        </div>
+        <div className="bars" />
+        <div className="right-side">
+          <div className="current-chap">Current Chapter</div>
+          <div className="chap-num">Chapter 17</div>
+          <button type="button" className="update-prog">Update progress</button>
         </div>
       </div>
     </div>
@@ -33,6 +61,7 @@ Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;

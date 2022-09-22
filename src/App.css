@@ -21,3 +21,11 @@
 body {
   background-color: var(--pale-grey);
 }
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}

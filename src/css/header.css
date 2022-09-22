@@ -4,12 +4,11 @@
   background-color: #fff;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .navs {
   display: flex;
-
-  /* justify-content: flex-start; */
   gap: 40px;
   line-height: 2.313rem;
   font-family: "Montserrat", serif;
@@ -53,5 +52,17 @@
 
 .active {
   opacity: 1;
-  border-bottom: var(--azure);
+  border-bottom: 4px solid var(--azure);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    margin: 0 0 2.375rem;
+    padding: 3% 10%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }

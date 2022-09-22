@@ -22,11 +22,12 @@ export default function books(state = initialState, action) {
 
 export const addBook = createAsyncThunk(
   ADD_BOOK, async (book) => {
-    await axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/4cuPlEv0mj0i8GEIw70u/books', {
+    await axios.post(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${process.env.REACT_APP_API_KEY}/books`, {
       item_id: book.id,
       title: book.title,
       author: book.author,
-      category: 'Not Provided',
+      category: book.category,
+      percentage: book.percentage,
     });
     return {
       book: [
@@ -34,7 +35,7 @@ export const addBook = createAsyncThunk(
         [{
           author: book.author,
           title: book.title,
-          category: 'Not Provided',
+          category: book.category,
         }],
       ],
     };
@@ -43,7 +44,7 @@ export const addBook = createAsyncThunk(
 
 export const removeBook = createAsyncThunk(
   REMOVE_BOOK, async (id) => {
-    await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/4cuPlEv0mj0i8GEIw70u/books/${id}`);
+    await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${process.env.REACT_APP_API_KEY}/books/${id}`);
     return { id };
   },
 );
@@ -51,7 +52,7 @@ export const removeBook = createAsyncThunk(
 export const fetchBooks = createAsyncThunk(
   FETCH_BOOKS,
   async () => {
-    const res = await axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/4cuPlEv0mj0i8GEIw70u/books');
+    const res = await axios.get(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${process.env.REACT_APP_API_KEY}/books`);
     return { books: Object.entries(res.data) };
   },
 );
