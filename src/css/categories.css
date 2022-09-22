@@ -1,24 +1,24 @@
 .check-status {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    height: 60vh;
-  }
-  
-  .check-status button {
-    border: none;
-    background: var(--bluish);
-    color: #fff;
-    font-weight: 700;
-    font-size: 2rem;
-    width: 15rem;
-    height: 5rem;
-    border-radius: 1rem;
-    cursor: pointer;
-  }
-  
-  .check h5 {
-    font-size: 4rem;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.check-status button {
+  border: none;
+  background: var(--bluish);
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+  width: 15rem;
+  height: 5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.check h5 {
+  font-size: 4rem;
+}
