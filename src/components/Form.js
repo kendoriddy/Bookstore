@@ -10,6 +10,7 @@ const Form = () => {
   const [bookValues, setBookValues] = useState({
     title: '',
     author: '',
+    category: '',
   });
 
   const handleChange = (e) => {
@@ -24,16 +25,19 @@ const Form = () => {
     e.preventDefault();
     const title = document.getElementsByName('title')[0].value;
     const author = document.getElementsByName('author')[0].value;
+    const category = document.getElementsByName('category')[0].value;
     if (!title.length > 0 || !author.length > 0) return;
     const book = {
       title: bookValues.title,
       author: bookValues.author,
+      category: bookValues.category,
       id: uuidv4(),
     };
     dispatch(addBook(book));
     setBookValues({
       title: '',
       author: '',
+      category,
     });
   };
 

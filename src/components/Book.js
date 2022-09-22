@@ -6,7 +6,9 @@ import { removeBook } from '../redux/books/books';
 
 const Book = (props) => {
   const dispatch = useDispatch();
-  const { title, author, id } = props;
+  const {
+    title, author, id, category,
+  } = props;
 
   const removeHandler = () => {
     dispatch(removeBook(id));
@@ -16,7 +18,7 @@ const Book = (props) => {
     <div className="card-container">
       <div className="left-side">
         <div>
-          <span className="class-of">Action</span>
+          <span className="class-of">{category}</span>
           <h2 className="title">{title}</h2>
           <span className="author">{author}</span>
         </div>
@@ -41,6 +43,7 @@ Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;
