@@ -53,5 +53,6 @@
 
 .active {
   opacity: 1;
-  border-bottom: var(--azure);
+  border-bottom: 4px solid var(--azure);
+  font-weight: 600;
 }
