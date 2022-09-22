@@ -76,9 +76,23 @@
   height: 1.5rem;
   color: var(--white);
 }
+
 .middle-bar {
   display: flex;
   align-items: center;
+}
+
+.percent {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.completed {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  color: var(--black);
 }
 
 .bars {
