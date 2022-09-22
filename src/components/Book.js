@@ -23,14 +23,16 @@ const Book = (props) => {
           <h2 className="title">{title}</h2>
           <span className="author">{author}</span>
         </div>
-        <div>
-          <button type="button" onClick={removeHandler}>
+        <div className="left-buttons">
+          <button className="left-btns comments" type="button" onClick={removeHandler}>
             Comments
           </button>
-          <button type="button" onClick={removeHandler}>
+          <span className="separator">|</span>
+          <button className="left-btns remove" type="button" onClick={removeHandler}>
             Remove
           </button>
-          <button type="button" onClick={removeHandler}>
+          <span className="separator">|</span>
+          <button className="left-btns edit" type="button" onClick={removeHandler}>
             Edit
           </button>
         </div>
