@@ -1,15 +1,12 @@
 .add-container {
   margin: 2.313rem 6.25rem 0;
-  border-top: 1px solid var(--black);
+  border-top: 1px solid var(--white);
 }
 
 .add-container h2 {
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.18px;
   color: #888888;
   padding-top: 1rem;
@@ -30,6 +27,19 @@
   margin-bottom: 5px;
   width: 100%;
   outline: none;
+}
+
+.add-submit {
+  padding: 0.801rem 2.77rem 0.886rem;
+  border-radius: 3px;
+  background-color: var(--azure);
+  text-transform: uppercase;
+  color: #fff;
+  border: 0;
+  font-family: "RobotoSlab", sans-serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+
 }
 
 @media screen and (min-width: 768px) {

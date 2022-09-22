@@ -83,7 +83,8 @@ const Form = () => {
             <option value="Romance"> Romance </option>
           </select>
         </label>
-        <button type="submit">ADD BOOK</button>
+
+        <button className="add-submit" type="submit">ADD BOOK</button>
       </form>
     </div>
   );
