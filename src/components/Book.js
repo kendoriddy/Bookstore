@@ -37,20 +37,22 @@ const Book = (props) => {
           </button>
         </div>
       </div>
-      <div className="middle-bar">
-        <div>
-          <ProgressBar />
+      <div className="other-flex">
+        <div className="middle-bar">
+          <div>
+            <ProgressBar />
+          </div>
+          <div>
+            <div className="percent">{`${percentage}%`}</div>
+            <div className="completed">Completed</div>
+          </div>
         </div>
-        <div>
-          <div className="percent">{`${percentage}%`}</div>
-          <div className="completed">Completed</div>
+        <div className="bars" />
+        <div className="right-side">
+          <div className="current-chap">Current Chapter</div>
+          <div className="chap-num">Chapter 17</div>
+          <button type="button" className="update-prog">Update progress</button>
         </div>
-      </div>
-      <div className="bars" />
-      <div className="right-side">
-        <div className="current-chap">Current Chapter</div>
-        <div className="chap-num">Chapter 17</div>
-        <button type="button" className="update-prog">Update progress</button>
       </div>
     </div>
   );

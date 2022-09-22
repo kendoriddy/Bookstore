@@ -9,12 +9,7 @@
   align-items: center;
 }
 
-.left-side {
-  width: 60%;
-}
-
 .class-of {
-  margin: 0 2.438rem 0 0;
   padding-top: 2rem;
   opacity: 0.5;
   font-family: "Montserrat", serif;
@@ -77,6 +72,13 @@
   color: var(--white);
 }
 
+.other-flex {
+  display: flex;
+  justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .middle-bar {
   display: flex;
   align-items: center;
@@ -136,4 +138,16 @@
   text-transform: uppercase;
   color: #fff;
   border: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 5% 10%;
+  }
+
+  .bars {
+    display: none;
+  }
 }

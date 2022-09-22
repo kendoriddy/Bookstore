@@ -1,5 +1,5 @@
 .add-container {
-  margin: 2.313rem 6.25rem 0;
+  margin: 2.313rem 10% 0;
   border-top: 1px solid var(--white);
 }
 
@@ -39,10 +39,14 @@
   font-family: "RobotoSlab", sans-serif;
   font-size: 0.813rem;
   font-weight: bold;
-
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
+  .add-container {
+    margin: 2.313rem 6.25rem 0;
+    border-top: 1px solid var(--white);
+  }
+
   .form {
     display: flex;
     flex-wrap: wrap;
