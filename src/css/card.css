@@ -27,3 +27,14 @@
   color: var(--black);
 }
 
+.middle-bar {
+  display: flex;
+  align-items: center;
+}
+
+.bars {
+  width: 0.125rem;
+  height: 4.375rem;
+  border: solid 1px var(--white);
+}
+

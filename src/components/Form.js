@@ -70,15 +70,15 @@ const Form = () => {
             required
           >
             <option disabled> Book </option>
-            <option value="programming"> Programming </option>
-            <option value="action"> Action </option>
-            <option value="fiction"> Fiction </option>
-            <option value="adventure"> Adventure </option>
-            <option value="history"> History </option>
-            <option value="sci-fi"> Science Fiction </option>
-            <option value="thriller"> Thriller </option>
-            <option value="suspense"> Suspense </option>
-            <option value="romance"> Romance </option>
+            <option value="Programming"> Programming </option>
+            <option value="Action"> Action </option>
+            <option value="Fiction"> Fiction </option>
+            <option value="Adventure"> Adventure </option>
+            <option value="History"> History </option>
+            <option value="Sci-fi"> Science Fiction </option>
+            <option value="Thriller"> Thriller </option>
+            <option value="Suspense"> Suspense </option>
+            <option value="Romance"> Romance </option>
           </select>
         </label>
         <button type="submit">ADD BOOK</button>

@@ -3,6 +3,7 @@ import '../css/card.css';
 import { useDispatch } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { removeBook } from '../redux/books/books';
+import { percentage, ProgressBar } from './ProgressBar';
 
 const Book = (props) => {
   const dispatch = useDispatch();
@@ -34,7 +35,16 @@ const Book = (props) => {
           </button>
         </div>
       </div>
-      <div className="middle-bar">Progress</div>
+      <div className="middle-bar">
+        <div>
+          <ProgressBar />
+        </div>
+        <div>
+          <div className="percent">{`${percentage}%`}</div>
+          <div className="completed">completed</div>
+        </div>
+      </div>
+      <div className="bars" />
       <div className="right-side">Chapter</div>
     </div>
   );
