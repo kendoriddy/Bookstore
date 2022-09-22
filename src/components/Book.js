@@ -49,7 +49,7 @@ const Book = (props) => {
       <div className="bars" />
       <div className="right-side">
         <div className="current-chap">Current Chapter</div>
-        <div className="current-chap">Chapter 17</div>
+        <div className="chap-num">Chapter 17</div>
         <button type="button" className="update-prog">Update progress</button>
       </div>
     </div>
