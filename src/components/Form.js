@@ -42,14 +42,15 @@ const Form = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={addBookHandler}>
+    <div className="book-form">
+      <form className="form" onSubmit={addBookHandler}>
         <input
           type="text"
           required
           value={bookValues.title}
           onChange={handleChange}
           placeholder="Book Title"
+          className="title-input"
           name="title"
         />
         <input
@@ -58,6 +59,7 @@ const Form = () => {
           value={bookValues.author}
           onChange={handleChange}
           placeholder="Author"
+          className="author-input"
           name="author"
         />
         <label htmlFor="category-select">

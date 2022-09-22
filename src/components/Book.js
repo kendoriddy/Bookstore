@@ -45,7 +45,11 @@ const Book = (props) => {
         </div>
       </div>
       <div className="bars" />
-      <div className="right-side">Chapter</div>
+      <div className="right-side">
+        <div className="current-chap">Current Chapter</div>
+        <div className="current-chap">Chapter 17</div>
+        <button type="button" className="update-prog">Update progress</button>
+      </div>
     </div>
   );
 };
