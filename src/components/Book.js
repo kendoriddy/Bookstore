@@ -13,19 +13,27 @@ const Book = (props) => {
   };
 
   return (
-    <div>
-      <div className="card-container">
-        <div className="left-side">
+    <div className="card-container">
+      <div className="left-side">
+        <div>
           <span className="class-of">Action</span>
           <h2 className="title">{title}</h2>
           <span className="author">{author}</span>
         </div>
         <div>
           <button type="button" onClick={removeHandler}>
+            Comments
+          </button>
+          <button type="button" onClick={removeHandler}>
             Remove
+          </button>
+          <button type="button" onClick={removeHandler}>
+            Edit
           </button>
         </div>
       </div>
+      <div className="middle-bar">Progress</div>
+      <div className="right-side">Chapter</div>
     </div>
   );
 };
