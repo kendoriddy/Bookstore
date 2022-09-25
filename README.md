@@ -15,6 +15,9 @@ The pull request is opened to get a review on the project and check for any requ
 - Redux
 - CSS
 
+## Demo
+[Live link](https://a-bookstore.netlify.app/)
+
 ## Getting Started
 
 **This web page is books site with my List planned or shores to do in the future**
