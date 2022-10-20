@@ -53,6 +53,7 @@ export const fetchBooks = createAsyncThunk(
   FETCH_BOOKS,
   async () => {
     const res = await axios.get(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${process.env.REACT_APP_API_KEY}/books`);
+    console.log(res);
     return { books: Object.entries(res.data) };
   },
 );
